@@ -1,0 +1,43 @@
+{
+  "name": "yaong2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.14.5",
+    "babel-jest": "^27.0.2",
+    "css-loader": "^5.2.6",
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "http-server": "^0.12.3",
+    "husky": "^6.0.0",
+    "jest": "^27.0.4",
+    "lint-staged": "^11.0.0",
+    "mini-css-extract-plugin": "^1.6.0",
+    "style-loader": "^2.0.0"
+  },
+  "scripts": {
+    "lint": "eslint src/**/*.js",
+    "build": "babel src -d dist -w",
+    "test": "jest --config=jest.config.js",
+    "start": "http-server . -c-1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
