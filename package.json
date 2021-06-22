@@ -26,7 +26,7 @@
   "scripts": {
     "lint": "eslint src/**/*.js",
     "build": "babel src -d dist -w",
-    "test": "jest --config=jest.config.js",
+    "test": "jest --passWithNoTests --config=jest.config.js",
     "start": "http-server . -c-1"
   },
   "lint-staged": {
