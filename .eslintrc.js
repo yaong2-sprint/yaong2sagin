@@ -11,6 +11,12 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'prettier/prettier': ['error'],
+    'prettier/prettier': [
+      'error',
+      {
+        // 시퀀스 끝 제어
+        endOfLine: 'auto',
+      },
+    ],
   },
 };
