@@ -4,6 +4,8 @@ const path = require('path');
 const webpack = require('webpack');
 
 const prod = process.env.NODE_ENV === 'production';
+const port = process.env.PORT || 3000;
+
 module.exports = {
   // webpack은 mode에 따라 내장 최적화
   mode: prod ? 'production' : 'development', // 'production' or "development" or "none"
@@ -43,10 +45,20 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    extensions: ['.js'],
+    alias: {
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@mocks': path.resolve(__dirname, 'src/mocks'),
+      '@style': path.resolve(__dirname, 'src/style'),
+      '@utils': path.resolve(__dirname, 'src/utils'),
+      '@api': path.resolve(__dirname, 'src/api'),
+    },
+  },
   devServer: {
     historyApiFallback: true,
     inline: true,
-    port: 8080,
+    port,
     hot: true,
     publicPath: '/',
   },
