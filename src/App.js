@@ -1,5 +1,9 @@
+import Search from './components/Search';
+
 export default class App {
   constructor($target) {
-    $target.textContent = 'hi~~';
+    this.target = $target;
+    this.searchSection = new Search($target);
+    // this.resultSection = new ResultSection($target, initialData);
   }
 }
