@@ -11,7 +11,6 @@ module.exports = {
   mode: prod ? 'production' : 'development', // 'production' or "development" or "none"
   // 소스 맵 생성 여부 및 방법 설정
   devtool: prod ? 'none' : 'eval-source-map', // https://brightparagon.wordpress.com/2018/06/27/webpack-v4-development-configuration/
-  // entry: { app: ['babel-polyfill', './src/main.js'] },
   entry: './src/main.js',
   output: {
     filename: 'static/js/main.js',
