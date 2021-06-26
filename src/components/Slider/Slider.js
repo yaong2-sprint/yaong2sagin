@@ -1,5 +1,5 @@
 export default class Slider {
-  constructor($target) {
+  constructor({ $target }) {
     this.$target = $target;
 
     this.currentTheme = localStorage.getItem('theme')

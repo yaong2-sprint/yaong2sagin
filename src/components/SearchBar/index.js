@@ -3,7 +3,7 @@ import RandomSearchButton from './RandomSearchButton';
 import SearchHistory from './SearchHistory';
 
 export default class Search {
-  constructor($target) {
+  constructor({ $target }) {
     this.$target = $target;
 
     this.$searchSection = document.createElement('section');
