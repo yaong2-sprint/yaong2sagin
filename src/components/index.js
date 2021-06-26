@@ -1,4 +1,5 @@
+import Slider from './Slider';
 import Loader from './Loader';
-import Search from './Search';
+import SearchBar from './SearchBar';
 
-export { Loader, Search };
+export { Slider, Loader, SearchBar };
