@@ -1,9 +1,3 @@
-[data-theme="dark"] {
-    --font-color: #ffffff !important;
-    --bg-color: #272930 !important;
-    --bg-opposite-color : #fff !important;
-}
-
 .slider-wrapper {
   display: flex;
   margin-top: 30px;
