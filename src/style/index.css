@@ -1,6 +1,41 @@
 @import "reset.css";
+@import "slider.css";
 @import "loading.css";
+@import "searchBar.css";
+@import "resultSection.css";
+
 * {
     box-sizing: border-box;
     font-family: 'Noto Sans KR', sans-serif;
+}
+
+:root {
+    --color-mode: 'light';
+    --color-dark : #272930;
+    --color-light : #fff;
+    --font-color: var(--color-dark);
+    --bg-color: var(--color-light);
+    --bg-opposite-color: #272930; 
+}
+
+[data-theme="dark"] {
+    --font-color: var(--color-light);
+    --bg-color: var(--color-dark);
+    --bg-opposite-color : var(--color-light);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-mode: 'dark';
+    }
+
+    :root:not([data-theme]) {
+        --bg-color: var(--color-dark);
+        --font-color: var(--color-light);
+    }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
 }
