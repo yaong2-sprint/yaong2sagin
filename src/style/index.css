@@ -1,6 +1,19 @@
 @import "reset.css";
+@import "slider.css";
 @import "loading.css";
+@import "searchBar.css";
+@import "resultSection.css";
+
+:root {
+    --primary-color: #302AE6;
+    --secondary-color: #536390;
+    --font-color: #424242 ;
+    --bg-color: #fff;
+    --heading-color: #292922;
+    --input-border-color : black;
+}
+
 * {
     box-sizing: border-box;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif !important;
 }
