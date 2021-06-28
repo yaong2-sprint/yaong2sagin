@@ -1,5 +1,5 @@
 export default class SearchHistory {
-  constructor($target, history) {
+  constructor({ $target, history }) {
     this.$searchHistory = document.createElement('div');
     this.$searchHistory.className = 'search-history';
 
