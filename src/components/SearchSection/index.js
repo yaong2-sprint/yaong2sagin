@@ -1,12 +1,13 @@
 import SearchInput from './SearchInput';
-import RandomSearchButton from './RandomSearchButton';
-import SearchHistory from './SearchHistory';
+import SearchButtons from './SearchButtons';
+import SearchSuggestion from './SearchBox';
 
-export default class SearchBar {
+export default class SearchSection {
   constructor({ $target, onSearch }) {
     this.$target = $target;
     this.onSearch = onSearch;
 
+    this.userInput = '';
     this.keywords = JSON.parse(sessionStorage.getItem('keywords'));
 
     this.$searchSection = document.createElement('section');
@@ -15,27 +16,33 @@ export default class SearchBar {
     this.render();
   }
 
-  addKeyword(keyword) {
-    this.keywords = [keyword, ...this.keywords];
-  }
-
-  removeKeyword(keyword) {
-    this.keywords = [keyword, ...this.keywords];
+  setUserInput(value) {
+    console.log(this.userInput);
+    this.userInput = value;
   }
 
   render() {
     this.$searchInputWrapper = document.createElement('div');
     this.$searchInputWrapper.className = 'search-input-wrapper';
     this.inputComponents = [
-      new SearchInput({ $target: this.$searchInputWrapper }),
-      new RandomSearchButton({
+      new SearchInput({
         $target: this.$searchInputWrapper,
         onSearch: this.onSearch,
+        setUserInput: this.setUserInput,
+      }),
+      new SearchButtons({
+        $target: this.$searchInputWrapper,
+        userInput: this.userInput,
+        onSearch: this.onSearch,
+        onRandom: this.onRandom,
       }),
     ];
     this.$searchSection.appendChild(this.$searchInputWrapper);
 
-    this.$searchHistory = new SearchHistory({ $target: this.$searchSection });
+    this.$SearchSuggestion = new SearchSuggestion({
+      $target: this.$searchSection,
+      onSearch: this.onSearch,
+    });
 
     this.$target.append(this.$searchSection);
   }
