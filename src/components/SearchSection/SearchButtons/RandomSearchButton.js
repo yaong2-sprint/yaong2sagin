@@ -1,9 +1,9 @@
 export default class RandomSearchButton {
-  constructor({ $target, onSearch }) {
+  constructor({ $target, onRandom }) {
     this.$randomSearchButton = document.createElement('button');
     this.$randomSearchButton.className = 'random-search-button';
-    this.$randomSearchButton.innerText = '🐱';
-    this.$randomSearchButton.addEventListener('click', onSearch);
+    this.$randomSearchButton.textContent = '😼';
+    this.$randomSearchButton.addEventListener('click', onRandom);
 
     $target.appendChild(this.$randomSearchButton);
   }
