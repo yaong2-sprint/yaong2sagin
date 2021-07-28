@@ -4,8 +4,8 @@ webpack 부터 vanlila javascript로 야옹이 사진첩 구현 도전하기
 ## meeting log
 |날짜|진행상태|내용|비고|
 | ------ | ------ | ------ | ------ |
-|2021.06.22| :white_check_mark:   | [1차 meeting](https://github.com/yaong2-sprint/yaong2sagin/issues/1) | |
-|2021.06.23| :white_check_mark: | [2차 meeting](https://github.com/yaong2-sprint/yaong2sagin/issues/3) | |
+|2021.06.22| :white_check_mark:   | [1차 meeting & 회고](https://github.com/yaong2-sprint/yaong2sagin/issues/1) | |
+|2021.06.23| :white_check_mark: | [2차 meeting & 회고](https://github.com/yaong2-sprint/yaong2sagin/issues/3) | |
 
 ## pr
 |날짜|진행상태|내용|비고|
